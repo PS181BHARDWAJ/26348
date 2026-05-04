@@ -1,0 +1,29 @@
+{
+  "name": "affordmedical-backend-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AffordMedical backend assignment workspace for logging middleware, vehicle maintenance scheduling, and notification system design.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "start:logging": "node dist/logging_middleware/src/index.js",
+    "start:scheduler": "node dist/vehicle_maintence_scheduler/src/index.js",
+    "start:notifications": "node dist/notification_app_be/src/index.js",
+    "test": "npm run build && node dist/test/run-tests.js",
+    "start:mock": "node mock_api/server.js"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/node": "^22.15.30",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.0",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
